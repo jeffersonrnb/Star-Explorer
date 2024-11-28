@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://y1j1whocagrl"]
+
+[ext_resource type="Script" path="res://main/space_background/space.gd" id="1_02lk4"]
+[ext_resource type="Texture2D" uid="uid://46k2ktlbgb8j" path="res://assets/Background/Space_Background2.png" id="2_fdawi"]
+[ext_resource type="Texture2D" uid="uid://dqlwoe5oblvpc" path="res://assets/Background/Space_Background3.png" id="3_b6ifc"]
+[ext_resource type="Script" path="res://main/space_background/space_2.gd" id="3_uab6g"]
+
+[node name="SpaceBackground" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Space" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+motion_scale = Vector2(0, 0)
+script = ExtResource("1_02lk4")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Space"]
+scale = Vector2(1.248, 1.244)
+texture = ExtResource("2_fdawi")
+centered = false
+
+[node name="Space2" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(2393, -10)
+script = ExtResource("3_uab6g")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Space2"]
+scale = Vector2(1.497, 1.495)
+texture = ExtResource("3_b6ifc")
+centered = false
